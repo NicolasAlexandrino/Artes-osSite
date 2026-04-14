@@ -36,7 +36,7 @@ const produtos = [
     nome: "Quadro Personalizado",
     preco: 95,
     categoria: "Personalizados",
-    imagem: "quadro personalizado.jpg",
+    imagem: "Quadro personalizado.jpg",
     descricao: "Quadro criativo e personalizado para presentes especiais."
   },
   {
