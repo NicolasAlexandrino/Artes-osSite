@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comunidade de Artesãos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="topo">
+    <nav class="navbar">
+      <div class="logo-area">
+        <img src="Artesãos capa.png" alt="Logo da comunidade" class="logo-img" />
+        <div>
+          <h2>Comunidade de Artesãos</h2>
+          <p>Venda, descubra e compartilhe arte feita à mão</p>
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <input type="text" id="busca" placeholder="Buscar artesanato..." />
+        <button class="cart-button" id="abrirCarrinho">
+          🛒 Carrinho (<span id="contadorCarrinho">0</span>)
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <div class="banner-overlay">
+      <h1>Compre artesanato direto de quem faz</h1>
+      <p>Encontre peças únicas, apoie artistas independentes e participe da comunidade.</p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <section class="filtros-section">
+      <h2>Explorar produtos</h2>
+
+      <div class="filtros">
+        <button class="filtro-btn ativo" data-categoria="Todos">Todos</button>
+        <button class="filtro-btn" data-categoria="Decoração">Decoração</button>
+        <button class="filtro-btn" data-categoria="Crochê">Crochê</button>
+        <button class="filtro-btn" data-categoria="Madeira">Madeira</button>
+        <button class="filtro-btn" data-categoria="Cerâmica">Cerâmica</button>
+        <button class="filtro-btn" data-categoria="Personalizados">Personalizados</button>
+      </div>
+    </section>
+
+    <section class="produtos-header">
+      <h2>Produtos</h2>
+      <div class="extras-header">
+        <button id="mostrarFavoritos">⭐ Ver favoritos</button>
+        <button id="mostrarTodos">📦 Ver todos</button>
+      </div>
+    </section>
+
+    <section class="produtos" id="listaProdutos"></section>
+
+    <section class="comunidade">
+      <div class="comunidade-topo">
+        <h2>Comunidade</h2>
+        <p>Compartilhe ideias, divulgue seu trabalho e interaja com outros artesãos.</p>
+      </div>
+
+      <div class="criar-post">
+        <input type="text" id="nomeUsuario" placeholder="Seu nome" />
+        <textarea id="textoPost" placeholder="Escreva algo para a comunidade..."></textarea>
+        <button id="publicarPost">Publicar</button>
+      </div>
+
+      <div class="feed-posts" id="feedPosts"></div>
+    </section>
+  </main>
+
+  <aside class="painel-carrinho" id="painelCarrinho">
+    <div class="carrinho-topo">
+      <h2>Seu carrinho</h2>
+      <button id="fecharCarrinho">✖</button>
+    </div>
+
+    <div id="itensCarrinho" class="itens-carrinho">
+      <p class="vazio">Seu carrinho está vazio.</p>
+    </div>
+
+    <div class="carrinho-rodape">
+      <h3>Total: R$ <span id="totalCarrinho">0,00</span></h3>
+      <button id="limparCarrinho" class="btn-secundario">Limpar carrinho</button>
+      <button class="btn-principal">Finalizar pedido</button>
+    </div>
+  </aside>
+
+  <div class="overlay" id="overlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
